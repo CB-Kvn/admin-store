@@ -1,0 +1,7 @@
+{
+  "extends": "../../packages/tsconfig/tsconfig.server.json",
+  "include": ["src", "prisma/generated"],
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}
