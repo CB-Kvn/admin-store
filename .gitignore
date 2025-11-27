@@ -1,4 +1,58 @@
-node_modules
+# Node
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Turbo (monorepo cache)
+.turbo/
+apps/**/.turbo/
+
+# Build outputs
+dist/
+apps/**/dist/
+packages/**/dist/
+
+# Vite cache
+apps/**/node_modules/.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+apps/**/.env
+apps/**/.env.local
+apps/**/.env.development.local
+apps/**/.env.test.local
+apps/**/.env.production.local
+!.env.example
+!apps/**/.env.example
+
+# OS / Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Prisma (local dev databases)
+apps/api/prisma/*.db
+apps/api/prisma/*.sqlite
+
+# Coverage
+coverage/
+apps/**/coverage/
+
+# Misc
+*.pem
 dist
 .env
 **/.DS_Store
