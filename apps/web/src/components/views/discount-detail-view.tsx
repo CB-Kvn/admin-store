@@ -61,10 +61,10 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
-          <h2 className="mb-2">Discount not found</h2>
+          <h2 className="mb-2">Descuento no encontrado</h2>
           <Button onClick={onBack} variant="outline">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Discounts
+            Volver a Descuentos
           </Button>
         </div>
       </div>
@@ -99,9 +99,9 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h1>{discount.code || 'Auto-applied Discount'}</h1>
+            <h1>{discount.code || 'Descuento Auto-aplicado'}</h1>
             <p className="text-muted-foreground">
-              {discount.isGlobal ? 'Global Discount' : 'Targeted Discount'}
+              {discount.isGlobal ? 'Descuento Global' : 'Descuento Dirigido'}
             </p>
           </div>
         </div>
@@ -109,10 +109,10 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
         <div className="flex gap-2">
           <Button variant="outline" onClick={() => onEdit?.(discountId)}>
             <Edit className="mr-2 h-4 w-4" />
-            Edit
+            Editar
           </Button>
           <Button variant={discount.isActive ? 'outline' : 'default'}>
-            {discount.isActive ? 'Deactivate' : 'Activate'}
+            {discount.isActive ? 'Desactivar' : 'Activar'}
           </Button>
         </div>
       </div>
@@ -121,12 +121,12 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
         <div className="md:col-span-2 space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Discount Information</CardTitle>
+              <CardTitle>Información del Descuento</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <div className="text-sm text-muted-foreground">Code</div>
+                  <div className="text-sm text-muted-foreground">Código</div>
                   <div className="flex items-center gap-2">
                     {discount.code ? (
                       <>
@@ -134,12 +134,12 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                         <code className="text-lg">{discount.code}</code>
                       </>
                     ) : (
-                      <span className="text-muted-foreground">Auto-applied</span>
+                      <span className="text-muted-foreground">Auto-aplicado</span>
                     )}
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Type</div>
+                  <div className="text-sm text-muted-foreground">Tipo</div>
                   <div className="flex items-center gap-2 mt-1">
                     {React.createElement(getTypeIcon(discount.type), {
                       className: 'h-4 w-4',
@@ -151,7 +151,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Value</div>
+                  <div className="text-sm text-muted-foreground">Valor</div>
                   <div className="text-2xl">
                     {discount.type === 'percentage'
                       ? `${discount.value}%`
@@ -159,12 +159,12 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Status</div>
+                  <div className="text-sm text-muted-foreground">Estado</div>
                   <div className="mt-1">
                     {isExpired ? (
-                      <StatusBadge status="expired" variant="error" />
+                      <StatusBadge status="expirado" variant="error" />
                     ) : isUpcoming ? (
-                      <StatusBadge status="upcoming" variant="warning" />
+                      <StatusBadge status="próximo" variant="warning" />
                     ) : discount.isActive ? (
                       <StatusBadge status="active" variant="success" />
                     ) : (
@@ -178,7 +178,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <div className="text-sm text-muted-foreground">Start Date</div>
+                  <div className="text-sm text-muted-foreground">Fecha de Inicio</div>
                   <div>
                     {new Date(discount.startDate).toLocaleDateString('es-ES', {
                       year: 'numeric',
@@ -188,7 +188,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">End Date</div>
+                  <div className="text-sm text-muted-foreground">Fecha de Fin</div>
                   <div>
                     {new Date(discount.endDate).toLocaleDateString('es-ES', {
                       year: 'numeric',
@@ -202,13 +202,13 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
               <Separator />
 
               <div>
-                <div className="text-sm text-muted-foreground mb-2">Usage</div>
+                <div className="text-sm text-muted-foreground mb-2">Uso</div>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <span>
-                      {discount.timesUsed.toLocaleString()} times used
+                      {discount.timesUsed.toLocaleString()} veces usado
                       {discount.usageLimit &&
-                        ` of ${discount.usageLimit.toLocaleString()}`}
+                        ` de ${discount.usageLimit.toLocaleString()}`}
                     </span>
                     {discount.usageLimit && (
                       <span className="text-muted-foreground">
@@ -225,13 +225,13 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                   <Separator />
                   <div>
                     <div className="text-sm text-muted-foreground mb-2">
-                      Quantity Rules
+                      Reglas de Cantidad
                     </div>
                     <div className="grid gap-2 sm:grid-cols-2">
                       {discount.minQuantity && (
                         <div className="flex items-center gap-2">
                           <span className="text-sm text-muted-foreground">
-                            Minimum:
+                            Mínimo:
                           </span>
                           <Badge variant="outline">{discount.minQuantity}</Badge>
                         </div>
@@ -239,7 +239,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                       {discount.maxQuantity && (
                         <div className="flex items-center gap-2">
                           <span className="text-sm text-muted-foreground">
-                            Maximum:
+                            Máximo:
                           </span>
                           <Badge variant="outline">{discount.maxQuantity}</Badge>
                         </div>
@@ -254,13 +254,13 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
           {/* Assignments Section */}
           <Card>
             <CardHeader>
-              <CardTitle>Assignments</CardTitle>
+              <CardTitle>Asignaciones</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Products */}
               <div>
                 <div className="text-sm font-medium mb-3">
-                  Assigned Products ({assignedProducts.length})
+                  Productos Asignados ({assignedProducts.length})
                 </div>
                 {assignedProducts.length > 0 ? (
                   <div className="flex flex-wrap gap-2">
@@ -271,7 +271,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                     ))}
                   </div>
                 ) : (
-                  <p className="text-sm text-muted-foreground">No products assigned</p>
+                  <p className="text-sm text-muted-foreground">No hay productos asignados</p>
                 )}
               </div>
 
@@ -280,7 +280,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
               {/* Categories */}
               <div>
                 <div className="text-sm font-medium mb-3">
-                  Assigned Categories ({assignedCategories.length})
+                  Categorías Asignadas ({assignedCategories.length})
                 </div>
                 {assignedCategories.length > 0 ? (
                   <div className="flex flex-wrap gap-2">
@@ -292,7 +292,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                   </div>
                 ) : (
                   <p className="text-sm text-muted-foreground">
-                    No categories assigned
+                    No hay categorías asignadas
                   </p>
                 )}
               </div>
@@ -302,7 +302,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
               {/* Variants */}
               <div>
                 <div className="text-sm font-medium mb-3">
-                  Assigned Variants ({assignedVariants.length})
+                  Variantes Asignadas ({assignedVariants.length})
                 </div>
                 {assignedVariants.length > 0 ? (
                   <div className="flex flex-wrap gap-2">
@@ -319,7 +319,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                     ))}
                   </div>
                 ) : (
-                  <p className="text-sm text-muted-foreground">No variants assigned</p>
+                  <p className="text-sm text-muted-foreground">No hay variantes asignadas</p>
                 )}
               </div>
 
@@ -328,7 +328,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
               {/* Users */}
               <div>
                 <div className="text-sm font-medium mb-3">
-                  Assigned Users ({assignedUsers.length})
+                  Usuarios Asignados ({assignedUsers.length})
                 </div>
                 {assignedUsers.length > 0 ? (
                   <div className="flex flex-wrap gap-2">
@@ -339,7 +339,7 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
                     ))}
                   </div>
                 ) : (
-                  <p className="text-sm text-muted-foreground">No users assigned</p>
+                  <p className="text-sm text-muted-foreground">No hay usuarios asignados</p>
                 )}
               </div>
             </CardContent>
@@ -349,11 +349,11 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Settings</CardTitle>
+              <CardTitle>Configuración</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm">Active</span>
+                <span className="text-sm">Activo</span>
                 <Switch 
                   checked={discount.isActive}
                   disabled
@@ -371,11 +371,11 @@ export function DiscountDetailView({ discountId, onBack, onEdit }: DiscountDetai
 
           <Card>
             <CardHeader>
-              <CardTitle>Metadata</CardTitle>
+              <CardTitle>Metadatos</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div>
-                <div className="text-sm text-muted-foreground">Created</div>
+                <div className="text-sm text-muted-foreground">Creado</div>
                 <div className="text-sm">
                   {new Date(discount.createdAt).toLocaleDateString('es-ES')}
                 </div>

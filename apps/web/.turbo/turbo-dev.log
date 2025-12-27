@@ -1,0 +1,432 @@
+
+> apps-web@0.1.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v6.3.5[39m  [2mready in [0m[1m340[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5000[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m1:37:15 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:37:21 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:37:30 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:37:38 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:38:42 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:38:48 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:38:48 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'jsx text (
+  |
+  |           )'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:411:1]
+ 408 |                     />
+ 409 |                   </div>
+ 410 |                 </div>
+ 411 | ,->           </Card>
+ 412 | |   
+ 413 | `->           <Card className="p-6">
+ 414 |                 <h3 className="mb-4">Configuración</h3>
+ 415 |                 <div className="space-y-4">
+ 415 |                   <div className="flex items-center justify-between">
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:38:52 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:38:52 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'jsx text (
+  |
+  |           )'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:451:1]
+ 448 |                     />
+ 449 |                   </div>
+ 450 |                 </div>
+ 451 | ,->           </Card>
+ 452 | |   
+ 453 | `->           <Card>
+ 454 |                 <CardHeader>
+ 455 |                   <CardTitle>Asignaciones</CardTitle>
+ 455 |                   <CardDescription>
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:38:55 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:42:02 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:42:06 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:42:12 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:50:29 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discounts-view.tsx[22m
+[2m1:51:36 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:52:25 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:52:32 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:52:32 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:52:36 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:52:36 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:52:39 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:52:39 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:52:42 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:52:42 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:52:45 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:52:45 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:52:59 a. m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+[2m1:52:59 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:03 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:480:1]
+ 477 |                   <Package className="h-5 w-5 text-muted-foreground" />
+ 478 |                   <Label className="text-base">Productos</Label>
+ 479 |                 </div>
+ 480 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 481 |                   Selecciona productos específicos para este descuento
+ 482 |                 </p>
+ 482 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:17 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:53:17 a. m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:580:1]
+ 577 |                   <Tag className="h-5 w-5 text-muted-foreground" />
+ 578 |                   <Label className="text-base">Categorías</Label>
+ 579 |                 </div>
+ 580 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 581 |                   Aplica el descuento a todos los productos en estas categorías
+ 582 |                 </p>
+ 582 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+[2m1:53:17 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:580:1]
+ 577 |                   <Tag className="h-5 w-5 text-muted-foreground" />
+ 578 |                   <Label className="text-base">Categorías</Label>
+ 579 |                 </div>
+ 580 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 581 |                   Aplica el descuento a todos los productos en estas categorías
+ 582 |                 </p>
+ 582 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:22 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:53:22 a. m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:580:1]
+ 577 |                   <Tag className="h-5 w-5 text-muted-foreground" />
+ 578 |                   <Label className="text-base">Categorías</Label>
+ 579 |                 </div>
+ 580 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 581 |                   Aplica el descuento a todos los productos en estas categorías
+ 582 |                 </p>
+ 582 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+[2m1:53:22 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:580:1]
+ 577 |                   <Tag className="h-5 w-5 text-muted-foreground" />
+ 578 |                   <Label className="text-base">Categorías</Label>
+ 579 |                 </div>
+ 580 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 581 |                   Aplica el descuento a todos los productos en estas categorías
+ 582 |                 </p>
+ 582 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:27 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:53:27 a. m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:678:1]
+ 675 |                   <Grid3x3 className="h-5 w-5 text-muted-foreground" />
+ 676 |                   <Label className="text-base">Variantes de Productos</Label>
+ 677 |                 </div>
+ 678 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 679 |                   Aplica el descuento a variantes específicas (SKUs)
+ 680 |                 </p>
+ 680 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+[2m1:53:27 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:678:1]
+ 675 |                   <Grid3x3 className="h-5 w-5 text-muted-foreground" />
+ 676 |                   <Label className="text-base">Variantes de Productos</Label>
+ 677 |                 </div>
+ 678 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 679 |                   Aplica el descuento a variantes específicas (SKUs)
+ 680 |                 </p>
+ 680 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:33 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:53:33 a. m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:678:1]
+ 675 |                   <Grid3x3 className="h-5 w-5 text-muted-foreground" />
+ 676 |                   <Label className="text-base">Variantes de Productos</Label>
+ 677 |                 </div>
+ 678 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 679 |                   Aplica el descuento a variantes específicas (SKUs)
+ 680 |                 </p>
+ 680 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+[2m1:53:33 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:678:1]
+ 675 |                   <Grid3x3 className="h-5 w-5 text-muted-foreground" />
+ 676 |                   <Label className="text-base">Variantes de Productos</Label>
+ 677 |                 </div>
+ 678 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 679 |                   Aplica el descuento a variantes específicas (SKUs)
+ 680 |                 </p>
+ 680 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:38 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:53:38 a. m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:782:1]
+ 779 |                   <Users className="h-5 w-5 text-muted-foreground" />
+ 780 |                   <Label className="text-base">Usuarios Específicos</Label>
+ 781 |                 </div>
+ 782 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 783 |                   Descuentos personalizados para usuarios seleccionados
+ 784 |                 </p>
+ 784 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+[2m1:53:38 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:782:1]
+ 779 |                   <Users className="h-5 w-5 text-muted-foreground" />
+ 780 |                   <Label className="text-base">Usuarios Específicos</Label>
+ 781 |                 </div>
+ 782 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 783 |                   Descuentos personalizados para usuarios seleccionados
+ 784 |                 </p>
+ 784 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:44 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:53:44 a. m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:782:1]
+ 779 |                   <Users className="h-5 w-5 text-muted-foreground" />
+ 780 |                   <Label className="text-base">Usuarios Específicos</Label>
+ 781 |                 </div>
+ 782 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 783 |                   Descuentos personalizados para usuarios seleccionados
+ 784 |                 </p>
+ 784 | 
+     `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+[2m1:53:44 a. m.[22m [31m[1m[vite][22m[39m [31mInternal server error:   x Expected '</', got 'className'
+     ,-[C:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx:782:1]
+ 779 |                   <Users className="h-5 w-5 text-muted-foreground" />
+ 780 |                   <Label className="text-base">Usuarios Específicos</Label>
+ 781 |                 </div>
+ 782 |                 <p className="text-sm text-muted-foreground">
+     :                    ^^^^^^^^^
+ 783 |                   Descuentos personalizados para usuarios seleccionados
+ 784 |                 </p>
+ 784 | 
+     `----
+
+
+Caused by:
+    Syntax Error[39m
+  Plugin: [35mvite:react-swc[39m
+  File: [36mC:/Users/kvn-d/Documents/GitHub/admin-store/apps/web/src/components/views/discount-form-view.tsx[39m
+  
+[2m1:53:49 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:53:52 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discount-form-view.tsx[22m
+[2m1:57:53 a. m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/views/discounts-view.tsx[22m

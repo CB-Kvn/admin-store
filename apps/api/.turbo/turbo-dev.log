@@ -2,13 +2,942 @@
 > api@0.1.0 dev
 > ts-node-dev --respawn --transpile-only src/index.ts
 
-[INFO] 00:18:40 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 5.9.3)
-Error: listen EADDRINUSE: address already in use :::3000
-    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
-    at listenInCluster (node:net:1997:12)
-    at Server.listen (node:net:2102:7)
-    at Function.listen (C:\Users\kvn29\OneDrive\Documentos\GitHub\backend-admin-grema-store\node_modules\express\lib\application.js:635:24)
-    at Object.<anonymous> (C:\Users\kvn29\OneDrive\Documentos\GitHub\backend-admin-grema-store\apps\api\src\index.ts:68:5)
-[ERROR] 00:18:42 Error: listen EADDRINUSE: address already in use :::3000
-    at Module.<anonymous> (node:internal/modules/cjs/loader:1688:14)
-    at Module._compile (C:\Users\kvn29\OneDrive\Documentos\GitHub\backend-admin-grema-store\node_modules\source-map-support\source-map-support.js:568:25)
+[INFO] 01:31:49 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 5.9.3)
+API running on http://localhost:3000
+PrismaClientInitializationError: 
+Invalid `prisma.catalogItem.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\catalogItem.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCatalogItems(args?: Prisma.CatalogItemFindManyArgs) {
+→ 5   return prisma.catalogItem.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listProducts (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\product.controller.ts:83:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.material.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\material.service.ts:5:26
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listMaterials(args?: Prisma.MaterialFindManyArgs) {
+→ 5   return prisma.material.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listMaterialsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\material.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.color.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\color.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listColors(args?: Prisma.ColorFindManyArgs) {
+→ 5   return prisma.color.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listColorsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\color.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.closureType.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\closureType.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listClosureTypes(args?: Prisma.ClosureTypeFindManyArgs) {
+→ 5   return prisma.closureType.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listClosureTypesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\closureType.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.size.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\size.service.ts:5:22
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listSizes(args?: Prisma.SizeFindManyArgs) {
+→ 5   return prisma.size.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listSizesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\size.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.stone.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\stone.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listStones(args?: Prisma.StoneFindManyArgs) {
+→ 5   return prisma.stone.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listStonesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\stone.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.catalogItem.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\catalogItem.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCatalogItems(args?: Prisma.CatalogItemFindManyArgs) {
+→ 5   return prisma.catalogItem.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listProducts (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\product.controller.ts:83:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.warehouse.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\warehouse.service.ts:5:27
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listWarehouses(args?: Prisma.WarehouseFindManyArgs) {
+→ 5   return prisma.warehouse.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listWarehousesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\warehouse.controller.ts:14:24) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.category.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\category.service.ts:5:26
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCategories(args?: Prisma.CategoryFindManyArgs) {
+→ 5   return prisma.category.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listCategoriesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\category.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.material.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\material.service.ts:5:26
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listMaterials(args?: Prisma.MaterialFindManyArgs) {
+→ 5   return prisma.material.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listMaterialsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\material.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.color.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\color.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listColors(args?: Prisma.ColorFindManyArgs) {
+→ 5   return prisma.color.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listColorsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\color.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.closureType.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\closureType.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listClosureTypes(args?: Prisma.ClosureTypeFindManyArgs) {
+→ 5   return prisma.closureType.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listClosureTypesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\closureType.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.size.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\size.service.ts:5:22
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listSizes(args?: Prisma.SizeFindManyArgs) {
+→ 5   return prisma.size.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listSizesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\size.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.stone.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\stone.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listStones(args?: Prisma.StoneFindManyArgs) {
+→ 5   return prisma.stone.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listStonesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\stone.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.stockMovement.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\stockMovement.service.ts:5:31
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listStockMovements(args?: Prisma.StockMovementFindManyArgs) {
+→ 5   return prisma.stockMovement.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listStockMovementsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\stockMovement.controller.ts:26:23) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.warehouse.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\warehouse.service.ts:5:27
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listWarehouses(args?: Prisma.WarehouseFindManyArgs) {
+→ 5   return prisma.warehouse.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listWarehousesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\warehouse.controller.ts:14:24) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.warehouse.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\warehouse.service.ts:5:27
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listWarehouses(args?: Prisma.WarehouseFindManyArgs) {
+→ 5   return prisma.warehouse.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listWarehousesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\warehouse.controller.ts:14:24) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.catalogItem.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\catalogItem.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCatalogItems(args?: Prisma.CatalogItemFindManyArgs) {
+→ 5   return prisma.catalogItem.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listProducts (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\product.controller.ts:83:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.category.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\category.service.ts:5:26
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCategories(args?: Prisma.CategoryFindManyArgs) {
+→ 5   return prisma.category.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listCategoriesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\category.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.material.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\material.service.ts:5:26
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listMaterials(args?: Prisma.MaterialFindManyArgs) {
+→ 5   return prisma.material.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listMaterialsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\material.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.color.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\color.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listColors(args?: Prisma.ColorFindManyArgs) {
+→ 5   return prisma.color.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listColorsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\color.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.closureType.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\closureType.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listClosureTypes(args?: Prisma.ClosureTypeFindManyArgs) {
+→ 5   return prisma.closureType.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listClosureTypesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\closureType.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.size.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\size.service.ts:5:22
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listSizes(args?: Prisma.SizeFindManyArgs) {
+→ 5   return prisma.size.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listSizesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\size.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.stone.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\stone.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listStones(args?: Prisma.StoneFindManyArgs) {
+→ 5   return prisma.stone.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listStonesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\stone.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.stockMovement.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\stockMovement.service.ts:5:31
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listStockMovements(args?: Prisma.StockMovementFindManyArgs) {
+→ 5   return prisma.stockMovement.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listStockMovementsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\stockMovement.controller.ts:26:23) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.warehouse.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\warehouse.service.ts:5:27
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listWarehouses(args?: Prisma.WarehouseFindManyArgs) {
+→ 5   return prisma.warehouse.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listWarehousesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\warehouse.controller.ts:14:24) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.catalogItem.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\catalogItem.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCatalogItems(args?: Prisma.CatalogItemFindManyArgs) {
+→ 5   return prisma.catalogItem.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listProducts (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\product.controller.ts:83:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.catalogItem.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\catalogItem.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCatalogItems(args?: Prisma.CatalogItemFindManyArgs) {
+→ 5   return prisma.catalogItem.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listProducts (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\product.controller.ts:83:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.warehouse.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\warehouse.service.ts:5:27
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listWarehouses(args?: Prisma.WarehouseFindManyArgs) {
+→ 5   return prisma.warehouse.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listWarehousesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\warehouse.controller.ts:14:24) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.category.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\category.service.ts:5:26
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCategories(args?: Prisma.CategoryFindManyArgs) {
+→ 5   return prisma.category.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listCategoriesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\category.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.material.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\material.service.ts:5:26
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listMaterials(args?: Prisma.MaterialFindManyArgs) {
+→ 5   return prisma.material.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listMaterialsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\material.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.color.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\color.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listColors(args?: Prisma.ColorFindManyArgs) {
+→ 5   return prisma.color.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listColorsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\color.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.closureType.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\closureType.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listClosureTypes(args?: Prisma.ClosureTypeFindManyArgs) {
+→ 5   return prisma.closureType.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listClosureTypesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\closureType.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.size.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\size.service.ts:5:22
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listSizes(args?: Prisma.SizeFindManyArgs) {
+→ 5   return prisma.size.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listSizesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\size.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.stone.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\stone.service.ts:5:23
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listStones(args?: Prisma.StoneFindManyArgs) {
+→ 5   return prisma.stone.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listStonesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\stone.controller.ts:15:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.banner.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\banner.service.ts:5:24
+
+  2 import { Prisma } from '@prisma/client';
+  3 
+  4 export function listBanners(args?: Prisma.BannerFindManyArgs) {
+→ 5   return prisma.banner.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listBannersHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\banner.controller.ts:30:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.banner.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\banner.service.ts:5:24
+
+  2 import { Prisma } from '@prisma/client';
+  3 
+  4 export function listBanners(args?: Prisma.BannerFindManyArgs) {
+→ 5   return prisma.banner.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listBannersHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\banner.controller.ts:30:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.banner.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\banner.service.ts:5:24
+
+  2 import { Prisma } from '@prisma/client';
+  3 
+  4 export function listBanners(args?: Prisma.BannerFindManyArgs) {
+→ 5   return prisma.banner.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listBannersHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\banner.controller.ts:30:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.expense.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\expense.service.ts:5:25
+
+  2 import { Prisma } from '@prisma/client';
+  3 
+  4 export function listExpenses(args?: Prisma.ExpenseFindManyArgs) {
+→ 5   return prisma.expense.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listExpensesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\expense.controller.ts:41:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.banner.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\banner.service.ts:5:24
+
+  2 import { Prisma } from '@prisma/client';
+  3 
+  4 export function listBanners(args?: Prisma.BannerFindManyArgs) {
+→ 5   return prisma.banner.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listBannersHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\banner.controller.ts:30:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.expense.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\expense.service.ts:5:25
+
+  2 import { Prisma } from '@prisma/client';
+  3 
+  4 export function listExpenses(args?: Prisma.ExpenseFindManyArgs) {
+→ 5   return prisma.expense.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listExpensesHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\expense.controller.ts:41:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.catalogItem.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\catalogItem.service.ts:5:29
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listCatalogItems(args?: Prisma.CatalogItemFindManyArgs) {
+→ 5   return prisma.catalogItem.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listProducts (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\product.controller.ts:83:19) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+PrismaClientInitializationError: 
+Invalid `prisma.stockMovement.findMany()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\stockMovement.service.ts:5:31
+
+  2 import { Prisma } from '../../generated/prisma';
+  3 
+  4 export function listStockMovements(args?: Prisma.StockMovementFindManyArgs) {
+→ 5   return prisma.stockMovement.findMany(
+Can't reach database server at `postgresql-205380-0.cloudclusters.net:10009`
+
+Please make sure your database server is running at `postgresql-205380-0.cloudclusters.net:10009`.
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:7615)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at listStockMovementsHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\stockMovement.controller.ts:26:23) {
+  clientVersion: '5.22.0',
+  errorCode: undefined
+}
+[INFO] 02:23:02 Restarting: C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\index.js has been modified
+API running on http://localhost:3000
+[INFO] 02:28:35 Restarting: C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\index.js has been modified
+API running on http://localhost:3000
+PrismaClientValidationError: 
+Invalid `prisma.category.create()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\category.service.ts:13:26
+
+  10 }
+  11 
+  12 export function createCategory(data: Prisma.CategoryCreateInput, args?: Omit<Prisma.CategoryCreateArgs, 'data'>) {
+→ 13   return prisma.category.create({
+         data: {
+           name: "Bisuteria",
+           slug: "bisuteria",
+           description: "Accesorios para vestir a la moda",
+           ~~~~~~~~~~~
+       ?   createdAt?: DateTime,
+       ?   updatedAt?: DateTime,
+       ?   parent?: CategoryCreateNestedOneWithoutChildrenInput,
+       ?   children?: CategoryCreateNestedManyWithoutParentInput,
+       ?   items?: ItemCategoryCreateNestedManyWithoutCategoryInput,
+       ?   DiscountCategory?: DiscountCategoryCreateNestedManyWithoutCategoryInput
+         }
+       })
+
+Unknown argument `description`. Available options are marked with ?.
+    at wn (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at createCategoryHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\category.controller.ts:39:21) {
+  clientVersion: '5.22.0'
+}
+PrismaClientValidationError: 
+Invalid `prisma.category.create()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\category.service.ts:13:26
+
+  10 }
+  11 
+  12 export function createCategory(data: Prisma.CategoryCreateInput, args?: Omit<Prisma.CategoryCreateArgs, 'data'>) {
+→ 13   return prisma.category.create({
+         data: {
+           name: "Bisuteria",
+           slug: "bisuteria",
+           description: "Accesorios para vestir a la moda",
+           ~~~~~~~~~~~
+       ?   createdAt?: DateTime,
+       ?   updatedAt?: DateTime,
+       ?   parent?: CategoryCreateNestedOneWithoutChildrenInput,
+       ?   children?: CategoryCreateNestedManyWithoutParentInput,
+       ?   items?: ItemCategoryCreateNestedManyWithoutCategoryInput,
+       ?   DiscountCategory?: DiscountCategoryCreateNestedManyWithoutCategoryInput
+         }
+       })
+
+Unknown argument `description`. Available options are marked with ?.
+    at wn (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at createCategoryHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\category.controller.ts:39:21) {
+  clientVersion: '5.22.0'
+}
+PrismaClientValidationError: 
+Invalid `prisma.category.create()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\category.service.ts:13:26
+
+  10 }
+  11 
+  12 export function createCategory(data: Prisma.CategoryCreateInput, args?: Omit<Prisma.CategoryCreateArgs, 'data'>) {
+→ 13   return prisma.category.create({
+         data: {
+           name: "Bisuteria",
+           slug: "bisuteria",
+           description: "Accesorios para vestir a la moda",
+           ~~~~~~~~~~~
+       ?   createdAt?: DateTime,
+       ?   updatedAt?: DateTime,
+       ?   parent?: CategoryCreateNestedOneWithoutChildrenInput,
+       ?   children?: CategoryCreateNestedManyWithoutParentInput,
+       ?   items?: ItemCategoryCreateNestedManyWithoutCategoryInput,
+       ?   DiscountCategory?: DiscountCategoryCreateNestedManyWithoutCategoryInput
+         }
+       })
+
+Unknown argument `description`. Available options are marked with ?.
+    at wn (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at createCategoryHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\category.controller.ts:39:21) {
+  clientVersion: '5.22.0'
+}
+PrismaClientValidationError: 
+Invalid `prisma.category.create()` invocation in
+C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\services\category.service.ts:13:26
+
+  10 }
+  11 
+  12 export function createCategory(data: Prisma.CategoryCreateInput, args?: Omit<Prisma.CategoryCreateArgs, 'data'>) {
+→ 13   return prisma.category.create({
+         data: {
+           name: "Aretes",
+           slug: "aretes",
+           parentId: "1"
+                     ~~~
+         }
+       })
+
+Argument `parentId`: Invalid value provided. Expected Int or Null, provided String.
+    at wn (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:29:1363)
+    at $n.handleRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6958)
+    at $n.handleAndLogRequestError (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:121:6307)
+    at l (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\generated\prisma\runtime\library.js:130:9633)
+    at createCategoryHandler (C:\Users\kvn-d\Documents\GitHub\admin-store\apps\api\src\controllers\category.controller.ts:39:21) {

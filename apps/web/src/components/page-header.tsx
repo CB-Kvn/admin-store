@@ -7,6 +7,7 @@ import {
   BreadcrumbPage, 
   BreadcrumbSeparator 
 } from "./ui/breadcrumb";
+import { ReactNode } from "react";
 
 interface BreadcrumbItem {
   label: string;
@@ -17,13 +18,14 @@ interface PageHeaderProps {
   title: string;
   description?: string;
   breadcrumbs?: BreadcrumbItem[];
-  action?: {
+  action?: ReactNode | {
     label: string;
     onClick: () => void;
   };
+  actions?: ReactNode;
 }
 
-export function PageHeader({ title, description, breadcrumbs, action }: PageHeaderProps) {
+export function PageHeader({ title, description, breadcrumbs, action, actions }: PageHeaderProps) {
   return (
     <div className="space-y-4 mb-8">
       {breadcrumbs && breadcrumbs.length > 0 && (
@@ -55,11 +57,17 @@ export function PageHeader({ title, description, breadcrumbs, action }: PageHead
           )}
         </div>
         
-        {action && (
-          <Button onClick={action.onClick}>
-            {action.label}
-          </Button>
-        )}
+        {actions ? (
+          actions
+        ) : action ? (
+          typeof action === 'object' && 'label' in action ? (
+            <Button onClick={action.onClick}>
+              {action.label}
+            </Button>
+          ) : (
+            action
+          )
+        ) : null}
       </div>
     </div>
   );

@@ -573,7 +573,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\kvn29\\OneDrive\\Documentos\\GitHub\\backend-admin-grema-store\\apps\\api\\generated\\prisma",
+      "value": "C:\\Users\\kvn-d\\Documents\\GitHub\\admin-store\\apps\\api\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -587,7 +587,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\kvn29\\OneDrive\\Documentos\\GitHub\\backend-admin-grema-store\\apps\\api\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\kvn-d\\Documents\\GitHub\\admin-store\\apps\\api\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

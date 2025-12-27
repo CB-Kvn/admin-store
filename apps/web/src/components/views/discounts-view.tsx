@@ -55,11 +55,11 @@ export function DiscountsView({ onDiscountClick, onAddDiscount }: DiscountsViewP
   const columns = [
     {
       key: 'code',
-      label: 'Code',
+      label: 'Código',
       sortable: true,
       render: (_value: any, discount: Discount) => (
         <div>
-          <div className="text-foreground">{discount.code || 'Auto-applied'}</div>
+          <div className="text-foreground">{discount.code || 'Auto-aplicado'}</div>
           {discount.isGlobal && (
             <Badge variant="outline" className="mt-1">
               Global
@@ -70,7 +70,7 @@ export function DiscountsView({ onDiscountClick, onAddDiscount }: DiscountsViewP
     },
     {
       key: 'type',
-      label: 'Type',
+      label: 'Tipo',
       sortable: true,
       render: (_value: any, discount: Discount) => {
         const Icon = getTypeIcon(discount.type);
@@ -87,7 +87,7 @@ export function DiscountsView({ onDiscountClick, onAddDiscount }: DiscountsViewP
     },
     {
       key: 'value',
-      label: 'Value',
+      label: 'Valor',
       sortable: true,
       render: (_value: any, discount: Discount) => (
         <span>
@@ -96,43 +96,25 @@ export function DiscountsView({ onDiscountClick, onAddDiscount }: DiscountsViewP
       ),
     },
     {
-      key: 'timesUsed',
-      label: 'Usage',
-      sortable: true,
-      render: (_value: any, discount: Discount) => (
-        <div className="text-sm">
-          <div>
-            {discount.timesUsed.toLocaleString()}
-            {discount.usageLimit && ` / ${discount.usageLimit.toLocaleString()}`}
-          </div>
-          {discount.usageLimit && (
-            <div className="text-xs text-muted-foreground">
-              {((discount.timesUsed / discount.usageLimit) * 100).toFixed(1)}% used
-            </div>
-          )}
-        </div>
-      ),
-    },
-    {
       key: 'startDate',
-      label: 'Active Period',
+      label: 'Período Activo',
       sortable: true,
       render: (_value: any, discount: Discount) => (
         <div className="text-sm">
           <div>{new Date(discount.startDate).toLocaleDateString('es-ES')}</div>
           <div className="text-xs text-muted-foreground">
-            to {new Date(discount.endDate).toLocaleDateString('es-ES')}
+            hasta {new Date(discount.endDate).toLocaleDateString('es-ES')}
           </div>
         </div>
       ),
     },
     {
       key: 'isActive',
-      label: 'Status',
+      label: 'Estado',
       sortable: true,
       render: (_value: any, discount: Discount) => (
         <StatusBadge
-          status={discount.isActive ? 'active' : 'inactive'}
+          status={discount.isActive ? 'activo' : 'inactivo'}
           variant={discount.isActive ? 'success' : 'default'}
         />
       ),
@@ -142,12 +124,12 @@ export function DiscountsView({ onDiscountClick, onAddDiscount }: DiscountsViewP
   return (
     <div className="space-y-6">
       <PageHeader
-        title="Discounts"
-        description="Manage promotional codes and discounts"
+        title="Descuentos"
+        description="Gestiona códigos promocionales y descuentos"
         action={
           <Button onClick={onAddDiscount}>
             <Plus className="mr-2 h-4 w-4" />
-            Create Discount
+            Crear Descuento
           </Button>
         }
       />
@@ -156,7 +138,7 @@ export function DiscountsView({ onDiscountClick, onAddDiscount }: DiscountsViewP
         <div className="relative flex-1 max-w-sm">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search by code..."
+            placeholder="Buscar por código..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             className="pl-9"
@@ -167,25 +149,25 @@ export function DiscountsView({ onDiscountClick, onAddDiscount }: DiscountsViewP
           <Select value={typeFilter} onValueChange={setTypeFilter}>
             <SelectTrigger className="w-[140px]">
               <Filter className="mr-2 h-4 w-4" />
-              <SelectValue placeholder="Type" />
+              <SelectValue placeholder="Tipo" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Types</SelectItem>
-              <SelectItem value="percentage">Percentage</SelectItem>
-              <SelectItem value="fixed">Fixed</SelectItem>
-              <SelectItem value="buy_x_get_y">Buy X Get Y</SelectItem>
+              <SelectItem value="all">Todos los Tipos</SelectItem>
+              <SelectItem value="percentage">Porcentaje</SelectItem>
+              <SelectItem value="fixed">Monto Fijo</SelectItem>
+              <SelectItem value="buy_x_get_y">Compra X Lleva Y</SelectItem>
             </SelectContent>
           </Select>
 
           <Select value={statusFilter} onValueChange={setStatusFilter}>
             <SelectTrigger className="w-[140px]">
               <Filter className="mr-2 h-4 w-4" />
-              <SelectValue placeholder="Status" />
+              <SelectValue placeholder="Estado" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Status</SelectItem>
-              <SelectItem value="active">Active</SelectItem>
-              <SelectItem value="inactive">Inactive</SelectItem>
+              <SelectItem value="all">Todos los Estados</SelectItem>
+              <SelectItem value="active">Activo</SelectItem>
+              <SelectItem value="inactive">Inactivo</SelectItem>
             </SelectContent>
           </Select>
         </div>
