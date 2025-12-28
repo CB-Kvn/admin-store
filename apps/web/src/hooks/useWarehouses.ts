@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { PaginationParams, Warehouse, ID } from '../lib/api-types';
+import type { PaginationParams, Warehouse, ID, CreateWarehouseInput, UpdateWarehouseInput } from '../lib/api-types';
 import {
   useGetWarehousesQuery,
   useCreateWarehouseMutation,
@@ -32,14 +32,14 @@ export function useWarehouses(options?: UseWarehousesOptions) {
   };
 
   // CRUD actions
-  const createWarehouse = async (input: Omit<Warehouse, 'id'>) => {
+  const createWarehouse = async (input: CreateWarehouseInput) => {
     const result = await createWarehouseMutate(input).unwrap();
     refetchAll();
     console.log('[Almacenes] Almacén creado:', result);
     return result;
   };
 
-  const updateWarehouse = async ({ id, changes }: { id: ID; changes: Partial<Omit<Warehouse, 'id'>> }) => {
+  const updateWarehouse = async ({ id, changes }: { id: ID; changes: UpdateWarehouseInput }) => {
     const result = await updateWarehouseMutate({ id, changes }).unwrap();
     refetchAll();
     console.log('[Almacenes] Almacén actualizado:', result);

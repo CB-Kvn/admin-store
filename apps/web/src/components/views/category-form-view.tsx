@@ -35,7 +35,7 @@ export function CategoryFormView({
     name: '',
     slug: '',
     description: '',
-    parentId: 'none' as string,
+    parentId: 0 as number,
   });
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export function CategoryFormView({
         name: category.name ?? '',
         slug: category.slug ?? '',
         description: category.description ?? '',
-        parentId: (category.parentId ? String(category.parentId) : 'none'),
+        parentId: (category.parentId ? Number(category.parentId) : 0),
       });
     }
   }, [category, isEditing]);
@@ -56,13 +56,14 @@ export function CategoryFormView({
         name: formData.name.trim(),
         slug: formData.slug.trim(),
         description: formData.description.trim() || undefined,
-        parentId: formData.parentId === 'none' ? undefined : formData.parentId,
+        parentId: formData.parentId === 0 ? undefined :  Number(formData.parentId),
       };
 
       if (isEditing && categoryId) {
         await updateCategory({ id: categoryId, changes: payload });
         toast.success('Categoría actualizada correctamente');
       } else {
+        console.log('Creating category with payload:', payload);
         await createCategory(payload as any);
         toast.success('Categoría creada correctamente');
       }

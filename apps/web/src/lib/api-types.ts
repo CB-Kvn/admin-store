@@ -325,10 +325,22 @@ export interface ClosureType {
 export interface Warehouse {
   id: ID;
   name: string;
-  location?: string;
-  status?: 'active' | 'inactive' | 'maintenance' | string;
-  capacity?: number;
+  location: string;
+  address: string;
+  manager?: string;
+  phone?: string;
+  email?: string;
+  capacity: number;
+  currentOccupancy?: number;
+  status?: 'ACTIVE' | 'INACTIVE' | 'MAINTENANCE' | string;
+  lastInventoryDate?: string;
+  notes?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
+
+export type CreateWarehouseInput = Omit<Warehouse, 'id' | 'createdAt' | 'updatedAt'>;
+export type UpdateWarehouseInput = Partial<CreateWarehouseInput>;
 
 // Warehouse Stock
 export interface WarehouseStock {

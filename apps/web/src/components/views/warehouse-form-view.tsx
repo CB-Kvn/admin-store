@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -14,6 +14,8 @@ import {
   SelectValue,
 } from "../ui/select";
 import type { WarehouseStatus } from "../../lib/types";
+import { useWarehouses } from "../../hooks/useWarehouses";
+import { useGetWarehouseByIdQuery } from "../../state";
 
 interface WarehouseFormViewProps {
   warehouseId?: string;
@@ -22,28 +24,92 @@ interface WarehouseFormViewProps {
 
 export function WarehouseFormView({ warehouseId, onBack }: WarehouseFormViewProps) {
   const isEditing = !!warehouseId;
+  const { createWarehouse, updateWarehouse, isCreatingWarehouse, isUpdatingWarehouse } = useWarehouses();
+  const { data: warehouseData, isLoading: isLoadingWarehouse } = useGetWarehouseByIdQuery(warehouseId!, {
+    skip: !isEditing,
+  });
   
   // Form state
   const [formData, setFormData] = useState({
     name: "",
     location: "",
-    status: "active" as WarehouseStatus,
+    address: "",
+    manager: "",
+    phone: "",
+    email: "",
+    status: "ACTIVE" as WarehouseStatus,
     capacity: "",
     currentOccupancy: "",
+    lastInventoryDate: "",
+    notes: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    if (warehouseData && isEditing) {
+      setFormData({
+        name: warehouseData.name ?? "",
+        location: warehouseData.location ?? "",
+        address: (warehouseData as any).address ?? "",
+        manager: (warehouseData as any).manager ?? "",
+        phone: (warehouseData as any).phone ?? "",
+        email: (warehouseData as any).email ?? "",
+        status: (warehouseData as any).status ?? "ACTIVE",
+        capacity: warehouseData.capacity != null ? String(warehouseData.capacity) : "",
+        currentOccupancy: (warehouseData as any).currentOccupancy != null ? String((warehouseData as any).currentOccupancy) : "",
+        lastInventoryDate: (warehouseData as any).lastInventoryDate
+          ? new Date((warehouseData as any).lastInventoryDate).toISOString().slice(0, 10)
+          : "",
+        notes: (warehouseData as any).notes ?? "",
+      });
+    }
+  }, [warehouseData, isEditing]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validation
-    if (!formData.name || !formData.location || !formData.capacity) {
-      toast.error("Por favor completa todos los campos requeridos");
+    if (!formData.name || !formData.location || !formData.address || !formData.capacity) {
+      toast.error("Por favor completa nombre, ubicación, dirección y capacidad");
       return;
     }
 
-    // In a real app, this would make an API call
-    toast.success(isEditing ? "Almacén actualizado correctamente" : "Almacén creado correctamente");
-    onBack();
+    try {
+      const payload = {
+        name: formData.name.trim(),
+        location: formData.location.trim(),
+        address: formData.address.trim(),
+        manager: formData.manager.trim() || undefined,
+        phone: formData.phone.trim() || undefined,
+        email: formData.email.trim() || undefined,
+        status: formData.status,
+        capacity: Number(formData.capacity),
+        currentOccupancy: formData.currentOccupancy ? Number(formData.currentOccupancy) : 0,
+        lastInventoryDate: formData.lastInventoryDate ? new Date(formData.lastInventoryDate).toISOString() : undefined,
+        notes: formData.notes.trim() || undefined,
+      };
+
+      if (Number.isNaN(payload.capacity)) {
+        toast.error("Capacidad debe ser numérica");
+        return;
+      }
+
+      if (Number.isNaN(payload.currentOccupancy)) {
+        toast.error("Ocupación actual debe ser numérica");
+        return;
+      }
+
+      if (isEditing && warehouseId) {
+        await updateWarehouse({ id: warehouseId, changes: payload });
+        toast.success("Almacén actualizado correctamente");
+      } else {
+        await createWarehouse(payload);
+        toast.success("Almacén creado correctamente");
+      }
+      onBack();
+    } catch (error: any) {
+      console.error(error);
+      toast.error(error?.data?.error || "Error al guardar el almacén");
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -94,9 +160,9 @@ export function WarehouseFormView({ warehouseId, onBack }: WarehouseFormViewProp
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="active">Activo</SelectItem>
-                    <SelectItem value="inactive">Inactivo</SelectItem>
-                    <SelectItem value="maintenance">Mantenimiento</SelectItem>
+                    <SelectItem value="ACTIVE">Activo</SelectItem>
+                    <SelectItem value="INACTIVE">Inactivo</SelectItem>
+                    <SelectItem value="MAINTENANCE">Mantenimiento</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -111,6 +177,50 @@ export function WarehouseFormView({ warehouseId, onBack }: WarehouseFormViewProp
                   onChange={(e) => handleChange("location", e.target.value)}
                   placeholder="ej., Nueva York, USA"
                   required
+                />
+              </div>
+
+              <div className="space-y-2 md:col-span-2">
+                <Label htmlFor="address">
+                  Dirección <span className="text-destructive">*</span>
+                </Label>
+                <Input
+                  id="address"
+                  value={formData.address}
+                  onChange={(e) => handleChange("address", e.target.value)}
+                  placeholder="Calle, número, ciudad"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="manager">Responsable</Label>
+                <Input
+                  id="manager"
+                  value={formData.manager}
+                  onChange={(e) => handleChange("manager", e.target.value)}
+                  placeholder="Nombre del encargado"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="phone">Teléfono</Label>
+                <Input
+                  id="phone"
+                  value={formData.phone}
+                  onChange={(e) => handleChange("phone", e.target.value)}
+                  placeholder="Ej. +1 555 123 4567"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email">Correo</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  placeholder="correo@empresa.com"
                 />
               </div>
 
@@ -140,6 +250,26 @@ export function WarehouseFormView({ warehouseId, onBack }: WarehouseFormViewProp
                   placeholder="ej., 5000"
                 />
               </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="lastInventoryDate">Último inventario</Label>
+                <Input
+                  id="lastInventoryDate"
+                  type="date"
+                  value={formData.lastInventoryDate}
+                  onChange={(e) => handleChange("lastInventoryDate", e.target.value)}
+                />
+              </div>
+
+              <div className="space-y-2 md:col-span-2">
+                <Label htmlFor="notes">Notas</Label>
+                <Input
+                  id="notes"
+                  value={formData.notes}
+                  onChange={(e) => handleChange("notes", e.target.value)}
+                  placeholder="Comentarios adicionales"
+                />
+              </div>
             </div>
           </Card>
 
@@ -147,7 +277,7 @@ export function WarehouseFormView({ warehouseId, onBack }: WarehouseFormViewProp
             <Button type="button" variant="outline" onClick={onBack}>
               Cancelar
             </Button>
-            <Button type="submit">
+            <Button type="submit" disabled={isCreatingWarehouse || isUpdatingWarehouse || isLoadingWarehouse}>
               {isEditing ? "Actualizar Almacén" : "Crear Almacén"}
             </Button>
           </div>

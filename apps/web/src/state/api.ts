@@ -25,6 +25,8 @@ import type {
   Stone,
   ClosureType,
   Warehouse,
+  CreateWarehouseInput,
+  UpdateWarehouseInput,
   WarehouseStock,
   StockMovement,
   Discount,
@@ -370,11 +372,11 @@ export const api = createApi({
       query: (id) => ({ url: `warehouses/${id}` }),
       providesTags: (result, error, id) => [{ type: 'Warehouses', id }],
     }),
-    createWarehouse: builder.mutation<Warehouse, Omit<Warehouse, 'id'>>({
+    createWarehouse: builder.mutation<Warehouse, CreateWarehouseInput>({
       query: (body) => ({ url: 'warehouses', method: 'POST', body }),
       invalidatesTags: [{ type: 'Warehouses', id: 'LIST' }],
     }),
-    updateWarehouse: builder.mutation<Warehouse, { id: ID; changes: Partial<Omit<Warehouse, 'id'>> }>({
+    updateWarehouse: builder.mutation<Warehouse, { id: ID; changes: UpdateWarehouseInput }>({
       query: ({ id, changes }) => ({ url: `warehouses/${id}`, method: 'PUT', body: changes }),
       invalidatesTags: (result, error, { id }) => [{ type: 'Warehouses', id }],
     }),
